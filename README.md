@@ -1,3 +1,5 @@
+#Go Travel
+
 Responsive website made with Tailwind CSS, includes dark mode toggle.
 
 ## Features
