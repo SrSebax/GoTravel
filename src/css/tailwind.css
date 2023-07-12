@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Card City */
+  .card {
+    @apply w-48 h-64 shadow-md rounded-lg flex-none transform transition hover:-translate-y-2;
+  }
+  .img-card {
+    @apply w-full h-4/5 bg-cover rounded-t-lg pt-1;
+  }
+  .space-title {
+    @apply w-full h-1/5 rounded-b-lg;
+  }
+  .title-card {
+    @apply font-bold text-xl flex justify-center pt-1;
+  }
+
+  .card:nth-child(odd) {
+    @apply bg-secondary text-white dark:bg-gray-700;
+  }
+  .card:nth-child(even) {
+    @apply bg-primary text-white dark:bg-gray-800;
+  }
+
+  /* Card Hotel */
+  
+  .card-text {
+    @apply absolute top-0 left-0 bg-white2 rounded-ee-full dark:bg-gray-700;
+  }
+  .hotel-title {
+    @apply text-xl px-8 pt-8 pb-2 font-extrabold text-black dark:text-white;
+  }
+  .hotel-subtitle {
+    @apply text-sm pl-10 text-black mr-24 font-semibold dark:text-white pb-4;
+  }
+  .button-card {
+    @apply bg-primary hover:-translate-y-1 text-white font-bold py-2 px-4 rounded shadow-xl dark:bg-gray-700 dark:hover:bg-primary;
+  }
+
+}

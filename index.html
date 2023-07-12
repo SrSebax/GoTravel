@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="scroll-smooth dark">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Go Travel</title>
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../public/css/tailwind.css" />
+  <script src="https://kit.fontawesome.com/12d41c5d30.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+
+<body class="font-Montserrat dark:bg-gray-900">
+  <nav class="fixed z-10 hidden h-14 w-full justify-between bg-white p-4 lg:flex shadow-xl dark:bg-gray-800">
+    <div class="h-auto w-auto flex items-center">
+      <p class="text-xl text-primary font-Roboto">Go Travel</p>
+      <i class="ml-6 text-primary flec items-center fa-solid fa-plane text-xl"></i>
+
+    </div>
+    <div class="flex space-x-8">
+      <a class="font-bold text-lg text-primary" href="#home">Inicio</a>
+      <a class="font-bold text-lg text-primary" href="#recomendados">Lugares</a>
+      <a class="font-bold text-lg text-primary" href="#top_hoteles">Hoteles</a>
+      <a class="font-bold text-lg text-primary" href="#faqs">FAQS</a>
+      <a class="font-bold text-lg text-primary" href="#about">Nosotros</a>
+    </div>
+    <div class="flex items-center">
+      <a href="#home">
+        <i class="mx-5 fa-solid fa-magnifying-glass text-primary"></i>
+      </a>
+      <button id="toggle">
+        <i id="icon" class="mx-5 fa-solid fa-moon text-primary"></i>
+      </button>
+      <a href="#about">
+        <i class="mx-5 fa-solid fa-user text-primary"></i>
+      </a>
+    </div>
+  </nav>
+
+  <section class="w-full h-auto">
+    <div id="home">
+      <div class="w-full h-3/4">
+        <div
+          class="w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start">
+          <input
+            class="outline-none p-3 rounded-full shadow-sm transition duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden dark:bg-gray-800"
+            placeholder="Colombia" type="search" id="input-search" />
+          <div class="hidden h-auto lg:w-2/3 lg:flex bg-primary rounded-e-full py-2 dark:bg-gray-800 ">
+            <p class="text-white text-xl font-extrabold ml-16 p-3 ">Encuentra más ubicaciones como esta acá
+              <i class="fa-solid fa-location-dot fa-bounce mx-6"></i>
+            </p>
+          </div>
+          <button
+            class="w-64 rounded-full text-xl font-semibold p-4 text-primary shadow-lg bg-white transition duration-500 ease-in-out hover:bg-primary hover:text-white hover:-translate-y-1 hover:scale-110 lg:hidden dark:bg-gray-800 dark:text-white dark:hover:text-primary">
+            Explorar Más
+          </button>
+        </div>
+        <div class="w-full h-full lg:h-96 lg:bg-fondoDesktop lg:bg-cover lg:bg-center">
+          <img class="lg:hidden" src="./img/phone.jpg" alt="imageHome" />
+        </div>
+      </div>
+    </div>
+
+    <div class="p-8" id="recomendados">
+      <p class="text-xl font-semibold text-primary">Ciudades Más Visitadas</p>
+
+      <div
+        class="flex z-10 mt-10 w-auto h-72 items-center overflow-x-auto overscroll-x-contain space-x-4 overflow-hidden overflow-y-hidden">
+        <div class="card">
+          <div class="img-card bg-medellin"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Medellin</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-bogota"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Bogotá</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-cartagena"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Cartagena</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-barranquilla"></div>
+          <div class="space-title ">
+            <p class="title-card text-white">Barranquilla</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-quindio"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Quindío</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-cali"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Cali</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="img-card bg-santaMarta"></div>
+          <div class="space-title">
+            <p class="title-card text-white">Santa Marta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="top_hoteles" class="h-full w-full px-6">
+      <p class="text-xl text-primary font-semibold pb-6 mt-6">
+        Top Hoteles
+      </p>
+
+      <div class="w-ful h-full grid grid-cols-1 lg:grid-cols-2 lg:place-items-center gap-4 lg:place-content-stretch">
+
+        <div class="relative w-full h-96 rounded-lg overflow-hidden lg:col-span-2">
+          <img class="object-cover h-full w-full bg-hotelDecameron bg-cover" />
+          <div class="card-text">
+            <p class="hotel-title">Hotel Decameron</p>
+            <p class="hotel-subtitle">
+              2 habitaciones, baño con jacuzzi y cocina integrada.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 mb-4 mr-4">
+            <button class="button-card">
+              Más Detalles
+            </button>
+          </div>
+        </div>
+
+        <div class="relative w-full h-96 rounded-lg overflow-hidden lg:row-span-2 lg:h-[49rem]">
+          <img class="object-cover h-full w-full bg-hotelHilton bg-cover" />
+          <div class="card-text">
+            <p class="hotel-title">Hotel Hilton</p>
+            <p class="hotel-subtitle">
+              2 habitaciones ambas con vista al mar, 2 baños y cocina.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 mb-4 mr-4">
+            <button class="button-card">
+              Más Detalles
+            </button>
+          </div>
+        </div>
+
+        <div class="relative w-full h-96 rounded-lg overflow-hidden">
+          <img class="object-cover h-full w-full bg-hotelAngel bg-cover" />
+          <div class="card-text">
+            <p class="hotel-title">Hotel San Angel</p>
+            <p class="hotel-subtitle">
+              2 habitaciones, baño y cocina.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 mb-4 mr-4">
+            <button class="button-card">
+              Más Detalles
+            </button>
+          </div>
+        </div>
+
+        <div class="relative w-full h-96 rounded-lg overflow-hidden">
+          <img class="object-cover h-full w-full bg-hotelArvi bg-cover" />
+          <div class="card-text">
+            <p class="hotel-title">Hotel Arví</p>
+            <p class="hotel-subtitle">
+              1 habitacion, piscina, baño y cocina.
+            </p>
+          </div>
+          <div class="absolute bottom-0 right-0 mb-4 mr-4">
+            <button class="button-card">
+              Más Detalles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQS EN FLEX -->
+    <!-- <div class="w-full h-full" id="faqs">
+      <div class="w-full h-full px-6 flex flex-col space-y-3 dark:text-white">
+        <p class="text-xl text-primary font-semibold mt-6 ">FAQS</p>
+        <div>
+          <p class="text-xl font-medium text-primary">
+            Política de Cancelación
+          </p>
+          <p class="pt-2">
+            Para estancias menores a una semana es importante avisar con 3
+            días de anticipación, de caso contario será sancionado.
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-medium text-primary">Métodos de pago</p>
+          <p class="pt-2">
+            Aceptamos distintos métodos de pago: VISA, MasterCard, American
+            Express, Paypal y Binance.
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-medium text-primary">Mascotas</p>
+          <p class="pt-2">
+            El tema de las mascotas dependerá directamente del anfitrión.
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-medium text-primary">
+            Información de Seguridad
+          </p>
+          <p class="pt-2">
+            Todas nuestras estancias cuentan con seguro en caso de
+            accidentes.
+          </p>
+        </div>
+        <div>
+          <p class="text-xl font-medium text-primary">Estancias Largas</p>
+          <p class="pt-2">
+            Contamos con estancias de hasta 3 meses, en este caso es
+            requerido un anticipo con un monto del 50% del valor de la
+            renta.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div> -->
+
+    <div class="w-full h-full" id="faqs">
+      <div class="w-full h-full px-8 dark:text-white">
+        <p class="text-xl text-primary font-semibold my-6">FAQs</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div>
+            <p class="text-xl font-medium text-primary">Política de Cancelación</p>
+            <p class="pt-2">
+              Para estancias menores a una semana es importante avisar con 3 días de anticipación, de caso contrario
+              será sancionado.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary">Métodos de pago</p>
+            <p class="pt-2">
+              Aceptamos distintos métodos de pago: VISA, MasterCard, American Express, Paypal y Binance.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary">Mascotas</p>
+            <p class="pt-2">
+              El tema de las mascotas dependerá directamente del anfitrión.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary">Información de Seguridad</p>
+            <p class="pt-2">
+              Todas nuestras estancias cuentan con seguro en caso de accidentes.
+            </p>
+          </div>
+          <div>
+            <p class="text-xl font-medium text-primary">Estancias Largas</p>
+            <p class="pt-2">
+              Contamos con estancias de hasta 3 meses, en este caso es requerido un anticipo con un monto del 50% del
+              valor de la renta.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer id="about" class="text-black dark:bg-gray-900 mt-24 dark:text-white">
+      <div class="container mx-auto px-8 py-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div>
+            <h2 class="text-lg font-semibold mb-4 text-primary">Sobre Nosotros</h2>
+            <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla hendrerit mauris ut nisi
+              venenatis, non porta ipsum placerat.</p>
+          </div>
+          <div>
+            <h2 class="text-lg font-semibold mb-4 text-primary">Links</h2>
+            <ul class="text-sm">
+              <li>Patrocinadores</li>
+              <li>Preguntas</li>
+              <li>Terminos y condiciones</li>
+              <li>Trabaja con nosotros</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-lg font-semibold mb-4 text-primary">Siguenos</h2>
+            <ul class="text-xl flex space-x-2 ">
+              <li>
+                <a href="https://github.com/SrSebax" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sebax_lond/" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=100075721669236" target="_blank"
+                  rel="noopener noreferrer">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-lg font-semibold mb-4 text-primary">Contáctanos</h2>
+            <p class="text-sm">123 Main Street, City, Country</p>
+            <p class="text-sm">Phone: 123-456-7890</p>
+            <p class="text-sm">Email: info@example.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6">
+          <p class="text-sm text-gray-500">© 2023 Go Travel, Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+  </section>
+
+  <div id="tab_bar"
+    class="w-full h-16 bg-white flex items-center justify-center space-x-10 fixed left-0 bottom-0 lg:hidden shadow-xl dark:bg-gray-800 dark:shadow-white">
+    <a href="#home">
+      <i class="fa-solid fa-house text-xl text-primary"></i>
+    </a>
+    <a href="#top_hoteles">
+      <i class="fa-solid fa-magnifying-glass text-xl text-gray-900"></i>
+    </a>
+    <a href="#recomendados">
+      <i class="fa-solid fa-heart text-xl text-gray-900"></i>
+    </a>
+    <button id="toggle-sm">
+      <i id="icon-sm" class="fa-solid fa-moon text-xl text-gray-900"></i>
+    </button>
+    <a href="#home">
+      <i class="fa-solid fa-user text-xl text-gray-900"></i>
+    </a>
+  </div>
+</body>
+
+</html>
+
+<script>
+  const toggleButton = document.querySelector("#toggle");
+  const toggleButtonSm = document.querySelector("#toggle-sm");
+  const iconElement = document.querySelector("#icon");
+  const iconElementSm = document.querySelector("#icon-sm");
+
+  toggleButton.addEventListener("click", toggleDarkMode);
+  toggleButtonSm.addEventListener("click", toggleDarkMode);
+
+  function toggleDarkMode() {
+    const htmlElement = document.querySelector("html");
+    const isDarkMode = htmlElement.classList.contains("dark");
+
+    if (isDarkMode) {
+      htmlElement.classList.remove("dark");
+      iconElement.classList.remove("fa-sun");
+      iconElement.classList.add("fa-moon");
+
+      iconElementSm.classList.remove("fa-sun");
+      iconElementSm.classList.add("fa-moon");
+    } else {
+      htmlElement.classList.add("dark");
+      iconElement.classList.remove("fa-moon");
+      iconElement.classList.add("fa-sun");
+
+      iconElementSm.classList.remove("fa-moon");
+      iconElementSm.classList.add("fa-sun");
+    }
+  }
+
+</script>
